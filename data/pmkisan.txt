@@ -1,0 +1,77 @@
+SCHEME NAME
+PM-KISAN — Pradhan Mantri Kisan Samman Nidhi
+Also called: PM Kisan, Kisan Samman Nidhi, PM Kisan Yojana
+
+TYPE
+Central Government — Ministry of Agriculture and Farmers Welfare, Government of India
+
+WHAT IT IS
+A central government scheme that transfers Rs.6,000 per year directly to all land-owning farmer families in three equal instalments. No application needed once registered — money comes automatically every 4 months. Fully funded by the Central Government.
+
+BENEFIT AMOUNT
+- Rs.6,000 per year per farmer family
+- Paid in 3 instalments of Rs.2,000 each
+- Instalment 1: April to July
+- Instalment 2: August to November
+- Instalment 3: December to March
+- Payment mode: Direct Bank Transfer (DBT) to Aadhaar-linked bank account
+- 17th instalment was released in October 2024
+
+WHO IS ELIGIBLE
+- All farmer families in India who own cultivable agricultural land
+- Land must be registered in the farmer's name in land records
+- Both small and large landholders are eligible
+- Farmer family means husband, wife, and minor children together
+
+WHO IS NOT ELIGIBLE
+- Institutional landholders such as trusts and companies
+- Farmer families where any member is a current or former central or state government employee
+- Current or former Members of Parliament, MLAs, Ministers
+- Professionals such as doctors, engineers, lawyers, chartered accountants who are also farmers
+- Income tax payers
+- Pensioners receiving Rs.10,000 or more per month (excluding multi-tasking staff, class IV, and group D employees)
+
+DOCUMENTS REQUIRED
+- Aadhaar Card — mandatory, e-KYC is compulsory or payments are blocked
+- Land ownership documents / Pattadar Passbook
+- Bank account passbook — account must be Aadhaar-linked
+- Mobile number linked to Aadhaar
+
+HOW TO APPLY — NEW REGISTRATION
+Online:
+Step 1 — Visit pmkisan.gov.in
+Step 2 — Click Farmer Corner — click New Farmer Registration
+Step 3 — Enter Aadhaar number, mobile number, and state
+Step 4 — Fill in land details — survey number, khata number, area in acres
+Step 5 — Upload land ownership documents
+Step 6 — Submit — you will receive a reference number
+Step 7 — Application is verified by the state government
+Step 8 — Once approved, money starts arriving every 4 months
+
+Offline:
+Visit your nearest Common Service Centre (CSC) — they will register for free
+
+MANDATORY e-KYC STEP
+e-KYC is compulsory — without it, payments are blocked even if registered
+Visit pmkisan.gov.in — Farmer Corner — e-KYC
+Enter Aadhaar number and verify with OTP sent to registered mobile number
+
+HOW TO CHECK PAYMENT STATUS
+Visit pmkisan.gov.in — Farmer Corner — Beneficiary Status
+Enter Aadhaar number OR mobile number OR bank account number
+All instalments received will be shown with dates
+
+IF NAME NOT IN BENEFICIARY LIST OR PAYMENT NOT RECEIVED
+- Check e-KYC status first at pmkisan.gov.in
+- Contact your Village Revenue Officer or local agriculture office with land documents
+- Call helpline: 155261
+
+OFFICIAL WEBSITE
+pmkisan.gov.in
+
+HELPLINE
+155261 or 1800-115-526 (toll free)
+Email: pmkisan-ict@gov.in
+
+LAST UPDATED
+2024 — 17th instalment released October 2024

@@ -1,0 +1,59 @@
+SCHEME NAME
+TGMIP — Telangana Micro Irrigation Project
+Also called: Telangana Government Micro Irrigation Programme, Drip Irrigation Scheme, Sprinkler Irrigation Scheme
+Implemented under RKVY (Rashtriya Krishi Vikas Yojana) — Per Drop More Crop component from 2023-24 onwards
+
+TYPE
+State Government — Telangana Horticulture Department
+Centrally assisted scheme (RKVY funding)
+
+WHAT IT IS
+A subsidy scheme to install drip irrigation and sprinkler irrigation systems on farms. The government pays most of the cost — farmers pay only a small share. Helps farmers save water, reduce electricity bills, and increase crop yield.
+
+BENEFIT / SUBSIDY
+- SC and ST farmers: 100% subsidy (no cost to farmer)
+- All other farmers: 50% to 90% subsidy depending on category
+- Eligible area: up to 12.5 acres or actual land held, whichever is less
+- Can apply once every 7 years
+- 28 companies empanelled — farmer can freely choose any one
+- Government pays subsidy directly to the MI company — farmer pays only their share to the company
+
+WHO IS ELIGIBLE
+- All farmers in Telangana — all categories, all districts
+- No restriction on economic status or crop type
+- Horticulture, vegetable, field crop, and plantation farmers
+- SC/ST farmers get 100% subsidy
+
+DOCUMENTS REQUIRED
+- Aadhaar Card (with biometric authentication at application)
+- Pattadar Passbook / land ownership document
+- Bank account details
+- Caste Certificate — for SC/ST farmers claiming 100% subsidy
+- Quotation from one of the 28 empanelled MI companies (farmer chooses the company)
+
+HOW TO APPLY
+Online:
+Step 1 — Visit horticulturedept.telangana.gov.in
+Step 2 — Register with Aadhaar card and biometric authentication
+Step 3 — Select type of system: drip irrigation or sprinkler irrigation
+Step 4 — Select one of the 28 empanelled MI companies
+Step 5 — Submit application
+Step 6 — You will receive 5 SMS updates tracking your application status
+
+Offline:
+Step 1 — Visit any MeeSeva centre with Aadhaar card and Pattadar Passbook
+Step 2 — MeeSeva operator submits the application on your behalf
+
+After approval:
+- The MI company you selected installs the system on your farm
+- Government pays the subsidy amount directly to the MI company
+- You pay only your share (0% for SC/ST, 10-50% for others) to the company
+
+OFFICIAL WEBSITE
+horticulturedept.telangana.gov.in
+
+HELPLINE
+040-23381333 (Telangana Agriculture / Horticulture Department)
+
+LAST UPDATED
+2024 — now implemented under RKVY Per Drop More Crop scheme

@@ -1,0 +1,71 @@
+SCHEME NAME
+Rythu Bima — Farmers Group Life Insurance Scheme
+Also called: Rythu Bheema, Farmer Group Life Insurance Scheme
+
+TYPE
+State Government — Telangana
+Implemented through Life Insurance Corporation of India (LIC)
+
+WHAT IT IS
+A free life insurance scheme for farmers. If a registered farmer dies for any reason — natural death, accident, or illness — their family receives Rs.5 lakh within 10 days. The entire insurance premium is paid by the Telangana government. The farmer pays nothing.
+
+BENEFIT AMOUNT
+- Rs.5,00,000 (five lakh rupees) paid to the nominee on the death of the farmer
+- Covers death due to any reason — natural, accidental, illness
+- Amount transferred directly to nominee's bank account via RTGS within 10 days
+- Premium paid entirely by Telangana government — zero cost to farmer
+
+WHO IS ELIGIBLE
+- Farmers who are permanent residents of Telangana
+- Age between 18 and 59 years
+- Must be a Pattadar Passbook holder (land registered in farmer's name in Dharani database)
+- Only one policy per farmer
+
+WHO IS NOT ELIGIBLE
+- Farmers aged 60 years and above
+- Tenant farmers (land not in their own name)
+- Farmers not registered in Dharani / Bhubharati land records
+
+DOCUMENTS REQUIRED FOR ENROLMENT
+- Pattadar Passbook
+- Aadhaar Card
+- Residence proof
+- Nominee's Aadhaar Card
+- Nominee's bank account details
+- Mobile number
+
+DOCUMENTS REQUIRED FOR CLAIM (after farmer's death)
+- Death Certificate of the farmer
+- Aadhaar Card of deceased farmer
+- Aadhaar Card of nominee
+- Pattadar Passbook copy
+- Nominee's bank account passbook copy
+- Any additional documents requested by LIC
+
+HOW TO ENROL
+Step 1 — Contact your local Agriculture Extension Officer (AEO) — you do NOT need to visit any office yourself
+Step 2 — AEO collects your personal details, land details, and nominee details
+Step 3 — AEO enters your data into the Rythu Bima online portal
+Step 4 — Mandal Agriculture Officer verifies and authenticates the data
+Step 5 — LIC generates a unique LIC ID for the farmer
+Step 6 — Farmer receives an SMS on registered mobile with LIC ID
+Step 7 — LIC issues a Certificate of Insurance (Annexure II) in the farmer's name
+
+HOW TO CLAIM (after farmer's death)
+Step 1 — Nominee informs the District Nodal Officer through the Rythu Bima portal — no office visit needed
+Step 2 — Nominee uploads: death certificate, ID proofs, and bank details on the portal
+Step 3 — AEO and Mandal Agriculture Officer verify the claim
+Step 4 — Verified claim forwarded to LIC
+Step 5 — LIC transfers Rs.5 lakh to nominee's bank account within 10 days
+IMPORTANT — Claim must be made within 6 months of the farmer's death
+
+OFFICIAL WEBSITE
+rythubandhu.telangana.gov.in
+
+HELPLINE
+040-23383520 (Agriculture Department)
+LIC Hyderabad: 040-23232394
+LIC Email: bo_g504s1@licindia.com
+
+LAST UPDATED
+2024-2025

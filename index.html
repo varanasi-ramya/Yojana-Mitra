@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yojana Mitra | Farmer Schemes Portal</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-page: #F9FAFB;
+            --header-gradient: linear-gradient(135deg, #5D2A18, #8B4513);
+            --text-headline: #111827;
+            --text-subtitle: #4B5563;
+            --card-bg: #FFFFFF;
+            --border-color: #E5E7EB;
+            --tag-bg: #F5EBE0;
+            --tag-text: #5D2A18;
+            --btn-bg: #5D2A18;
+            --btn-text: #FFFFFF;
+            --btn-hover: #451E11;
+            --card-radius: 16px;
+            --container-max: 1280px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-headline);
+            line-height: 1.5;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 4rem 2rem 6rem;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--btn-bg);
+            border-color: white;
+        }
+
+        .lang-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--btn-bg);
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Search & Filter Section */
+        .controls-container {
+            max-width: var(--container-max);
+            margin: -3rem auto 2rem;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .search-box {
+            background: white;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box i {
+            color: #9CA3AF;
+            margin-right: 0.75rem;
+        }
+
+        .search-box input {
+            border: none;
+            width: 100%;
+            padding: 0.75rem 0;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid var(--border-color);
+            color: var(--text-subtitle);
+            padding: 0.625rem 1.25rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: var(--btn-bg);
+            color: white;
+            border-color: var(--btn-bg);
+        }
+
+        .filter-btn:hover:not(.active) {
+            border-color: #9CA3AF;
+            background: #F3F4F6;
+        }
+
+        /* Grid Layout */
+        main {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .schemes-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .schemes-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #D1D5DB;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-headline);
+            line-height: 1.3;
+        }
+
+        .card .benefit {
+            color: var(--btn-bg);
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card .arrow {
+            margin-top: auto;
+            color: var(--btn-bg);
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 800px;
+            max-height: 85vh;
+            border-radius: 24px;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: modalIn 0.3s ease-out;
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            padding: 2.5rem 2.5rem 1rem;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .modal-body {
+            padding: 0 2.5rem 2.5rem;
+        }
+
+        .close-modal {
+            background: #F3F4F6;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--text-subtitle);
+            transition: all 0.2s;
+        }
+
+        .close-modal:hover {
+            background: #E5E7EB;
+            color: #111827;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-headline);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-section p, .modal-section li {
+            color: var(--text-subtitle);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .modal-section li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .modal-section li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--btn-bg);
+            font-size: 0.875rem;
+        }
+
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--btn-bg);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .external-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-subtitle);
+            font-size: 0.875rem;
+        }
+
+        /* Utility Classes */
+        .hidden { display: none !important; }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.875rem; }
+            .modal-header, .modal-body { padding: 1.5rem; }
+            .controls-container { margin-top: -2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('hi')">हिंदी</button>
+            <button class="lang-btn" onclick="setLanguage('te')">తెలుగు</button>
+        </div>
+        <div class="header-content">
+            <h1 id="header-title">🌾 Every Government Scheme. Every Farmer. One Place.</h1>
+            <p id="header-subtitle">Ask about Rythu Bharosa, PM-KISAN, crop insurance and more — in English, Telugu, or Hindi.</p>
+        </div>
+    </header>
+
+    <div class="controls-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search schemes by name..." oninput="filterSchemes()">
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all" onclick="setFilter('all', this)">All Schemes</button>
+            <button class="filter-btn" data-filter="central" onclick="setFilter('central', this)">Central Schemes</button>
+            <button class="filter-btn" data-filter="telangana" onclick="setFilter('telangana', this)">Telangana Schemes</button>
+            <button class="filter-btn" data-filter="scst" onclick="setFilter('scst', this)">SC/ST Benefits</button>
+            <button class="filter-btn" data-filter="tenant" onclick="setFilter('tenant', this)">Tenant Farmers</button>
+        </div>
+    </div>
+
+    <main>
+        <div id="schemes-grid" class="schemes-grid">
+            <!-- Cards will be injected by JS -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div id="modal-title-area">
+                    <span id="modal-tag" class="card-tag"></span>
+                    <h2 id="modal-title"></h2>
+                </div>
+                <button class="close-modal" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section" id="section-description">
+                    <h3><i class="fas fa-info-circle"></i> <span class="label-what">What it is</span></h3>
+                    <p id="modal-desc"></p>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-coins"></i> <span class="label-benefit">Benefit / Subsidy</span></h3>
+                    <ul id="modal-benefits"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-user-check"></i> <span class="label-eligibility">Eligibility</span></h3>
+                    <ul id="modal-eligibility"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-file-invoice"></i> <span class="label-docs">Documents Required</span></h3>
+                    <ul id="modal-docs"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-clipboard-list"></i> <span class="label-apply">How to Apply</span></h3>
+                    <ul id="modal-apply"></ul>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-headset"></i> <span class="label-helpline">Helpline</span></h3>
+                    <p id="modal-helpline"></p>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-globe"></i> <span class="label-website">Official Website</span></h3>
+                    <a id="modal-website" href="#" target="_blank" class="external-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Yojana Mitra - Supporting Every Farmer. All scheme data from official sources.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                headerTitle: "🌾 Every Government Scheme. Every Farmer. One Place.",
+                headerSubtitle: "Ask about Rythu Bharosa, PM-KISAN, crop insurance and more — in English, Telugu, or Hindi.",
+                ctaText: "Ask Yojana Mitra →",
+                searchPlaceholder: "Search schemes by name...",
+                allSchemes: "All Schemes",
+                centralSchemes: "Central Schemes",
+                telanganaSchemes: "Telangana Schemes",
+                scstBenefits: "SC/ST Benefits",
+                tenantFarmers: "Tenant Farmers",
+                learnMore: "Full Details & How to Apply →",
+                labelWhat: "What it is",
+                labelBenefit: "Benefit / Subsidy",
+                labelEligibility: "Eligibility",
+                labelDocs: "Documents Required",
+                labelApply: "How to Apply",
+                labelHelpline: "Helpline",
+                labelWebsite: "Official Website",
+                footer: "© 2025 Yojana Mitra - Supporting Every Farmer. All scheme data from official sources.",
+                central: "Central",
+                telangana: "Telangana"
+            },
+            hi: {
+                headerTitle: "🌾 हर सरकारी योजना। हर किसान। एक जगह।",
+                headerSubtitle: "रायथू भरोसा, पीएम-किसान, फसल बीमा और बहुत कुछ के बारे में पूछें - अंग्रेजी, तेलुगु या हिंदी में।",
+                ctaText: "योजना मित्र से पूछें →",
+                searchPlaceholder: "नाम से योजनाएं खोजें...",
+                allSchemes: "सभी योजनाएं",
+                centralSchemes: "केंद्रीय योजनाएं",
+                telanganaSchemes: "तेलंगाना योजनाएं",
+                scstBenefits: "एसटी/एससी लाभ",
+                tenantFarmers: "बटाईदार किसान",
+                learnMore: "पूरा विवरण और आवेदन कैसे करें →",
+                labelWhat: "यह क्या है",
+                labelBenefit: "लाभ / सब्सिडी",
+                labelEligibility: "पात्रता",
+                labelDocs: "आवश्यक दस्तावेज़",
+                labelApply: "आवेदन कैसे करें",
+                labelHelpline: "हेल्पलाइन",
+                labelWebsite: "आधिकारिक वेबसाइट",
+                footer: "© 2025 योजना मित्र - हर किसान का समर्थन। सभी योजना डेटा आधिकारिक स्रोतों से है।",
+                central: "केंद्रीय",
+                telangana: "तेलंगाना"
+            },
+            te: {
+                headerTitle: "🌾 ప్రతి ప్రభుత్వ పథకం. ప్రతి రైతు. ఒకే చోట.",
+                headerSubtitle: "రైతు భరోసా, పీఎం-కిసాన్, పంట భీమా మరియు మరిన్నింటి గురించి అడగండి — ఇంగ్లీష్, తెలుగు లేదా హిందీలో.",
+                ctaText: "యోజన మిత్రను అడగండి →",
+                searchPlaceholder: "పథకాల పేర్ల ద్వారా వెతకండి...",
+                allSchemes: "అన్ని పథకాలు",
+                centralSchemes: "కేంద్ర పథకాలు",
+                telanganaSchemes: "తెలంగాణ పథకాలు",
+                scstBenefits: "SC/ST ప్రయోజనాలు",
+                tenantFarmers: "కౌలు రైతులు",
+                learnMore: "పూర్తి వివరాలు & ఎలా అప్లై చేయాలి →",
+                labelWhat: "పథకం గురించి",
+                labelBenefit: "ప్రయోజనం / రాయితీ",
+                labelEligibility: "అర్హత",
+                labelDocs: "కావలసిన పత్రాలు",
+                labelApply: "ఎలా దరఖాస్తు చేయాలి",
+                labelHelpline: "హెల్ప్‌లైన్",
+                labelWebsite: "అధికారిక వెబ్‌సైట్",
+                footer: "© 2025 యోజన మిత్ర - ప్రతి రైతుకు అండగా. సమాచారం అంతా అధికారిక వర్గాల నుండి సేకరించబడింది.",
+                central: "కేంద్ర ప్రభుత్వం",
+                telangana: "తెలంగాణ ప్రభుత్వం"
+            }
+        };
+
+        const schemes = [
+            {
+                id: "tmip",
+                tags: ["telangana", "scst"],
+                data: {
+                    en: {
+                        name: "TMIP - Micro Irrigation (Telangana)",
+                        benefit_short: "SC/ST: 100% Subsidy, Others: 50-90%",
+                        type: "Telangana",
+                        description: "A subsidy scheme to install drip and sprinkler irrigation systems, saving water and increasing yield.",
+                        benefits: ["SC/ST Farmers: 100% Subsidy", "BC/Others: 50% to 90% Subsidy", "Up to 12.5 acres coverage", "Save water and electricity", "Once every 7 years application"],
+                        eligibility: ["All farmers in Telangana", "No restriction on land size for SC/ST", "Cultivators of horticulture/field crops"],
+                        docs: ["Aadhaar Card", "Pattadar Passbook", "Caste Certificate (for SC/ST)", "Quotation from empanelled company"],
+                        apply: ["Online at horticulturedept.telangana.gov.in", "Biometric authentication required", "Offline via MeeSeva centers"],
+                        helpline: "040-23381333",
+                        website: "https://horticulturedept.telangana.gov.in"
+                    },
+                    hi: {
+                        name: "टीजीएमआईपी - सूक्ष्म सिंचाई (तेलंगाना)",
+                        benefit_short: "SC/ST: 100% सब्सिडी, अन्य: 50-90%",
+                        type: "तेलंगाना",
+                        description: "ड्रिप और स्प्रिंकलर सिंचाई प्रणाली स्थापित करने के लिए एक सब्सिडी योजना, जिससे पानी की बचत और पैदावार बढ़ती है।",
+                        benefits: ["SC/ST किसान: 100% सब्सिडी", "BC/अन्य: 50% से 90% सब्सिडी", "12.5 एकड़ तक कवरेज", "पानी और बिजली की बचत", "हर 7 साल में एक बार आवेदन"],
+                        eligibility: ["तेलंगाना के सभी किसान", "SC/ST के लिए भूमि आकार का कोई प्रतिबंध नहीं", "बागवानी/फसल खेती करने वाले"],
+                        docs: ["आधार कार्ड", "पट्टादार पासबुक", "जाति प्रमाण पत्र (SC/ST के लिए)", "सूचीबद्ध कंपनी से कोटेशन"],
+                        apply: ["horticulturedept.telangana.gov.in पर ऑनलाइन", "बायोमेट्रिक प्रमाणीकरण आवश्यक", "मीसेवा केंद्रों के माध्यम से ऑफलाइन"],
+                        helpline: "040-23381333",
+                        website: "https://horticulturedept.telangana.gov.in"
+                    },
+                    te: {
+                        name: "తెలంగాణ సూక్ష్మ సాగునీటి ప్రాజెక్ట్ (TMIP)",
+                        benefit_short: "SC/ST: 100% సబ్సిడీ, ఇతరులు: 50-90%",
+                        type: "తెలంగాణ",
+                        description: "డ్రిప్ మరియు స్ప్రింక్లర్ సాగునీటి వ్యవస్థలను ఏర్పాటు చేయడానికి సబ్సిడీ పథకం. ఇది నీటిని ఆదా చేయడమే కాకుండా దిగుబడిని పెంచుతుంది.",
+                        benefits: ["SC/ST రైతులకు: 100% రాయితీ", "BC/ఇతర రైతులకు: 50% నుండి 90% రాయితీ", "12.5 ఎకరాల వరకు పరిమితి", "నీరు మరియు విద్యుత్ ఆదా", "ప్రతి 7 సంవత్సరాలకు ఒకసారి దరఖాస్తు చేసుకోవచ్చు"],
+                        eligibility: ["తెలంగాణలోని రైతులందరూ అర్హులు", "SC/ST లకు భూమి పరిమితి లేదు", "తోటపని/పంటలు పండించే రైతులు"],
+                        docs: ["ఆధార్ కార్డు", "పట్టాదారు పాస్ బుక్", "కులం సర్టిఫికేట్ (SC/ST లకు)", "సంస్థ నుండి కొటేషన్"],
+                        apply: ["horticulturedept.telangana.gov.in లో ఆన్‌లైన్", "బయోమెట్రిక్ ధృవీకరణ అవసరం", "మీసేవా కేంద్రాల ద్వారా కూడా చేయవచ్చు"],
+                        helpline: "040-23381333",
+                        website: "https://horticulturedept.telangana.gov.in"
+                    }
+                }
+            },
+            {
+                id: "shc",
+                tags: ["central"],
+                data: {
+                    en: {
+                        name: "Soil Health Card",
+                        benefit_short: "Free Soil Testing every 2 years",
+                        type: "Central",
+                        description: "Free testing of farm soil to determine nutrient levels and recommend appropriate fertilizers.",
+                        benefits: ["Free soil testing for 12 parameters", "Customized fertilizer recommendations", "Reduce costs by 10-15%", "Increase yield by 5-10%", "Card issued once every 2 years"],
+                        eligibility: ["All farmers in India", "Available for both land-owners and tenants", "No restriction on land size"],
+                        docs: ["Aadhaar Card", "Land details (Survey Number)", "Mobile number"],
+                        apply: ["Contact local Agriculture Extension Officer (AEO)", "Sample collected by officials from your farm", "Download online at soilhealth.dac.gov.in"],
+                        helpline: "040-23381333",
+                        website: "https://soilhealth.dac.gov.in"
+                    },
+                    hi: {
+                        name: "मृदा स्वास्थ्य कार्ड (Soil Health Card)",
+                        benefit_short: "हर 2 साल में मुफ्त मिट्टी परीक्षण",
+                        type: "केंद्रीय",
+                        description: "पोषक तत्वों के स्तर को निर्धारित करने और उचित उर्वरकों की सिफारिश करने के लिए कृषि मिट्टी का मुफ्त परीक्षण।",
+                        benefits: ["12 मापदंडों के लिए मुफ्त मिट्टी परीक्षण", "अनुकूलित उर्वरक सिफारिशें", "लागत में 10-15% की कमी", "पैदावार में 5-10% की वृद्धि", "कार्ड हर 2 साल में एक बार जारी किया जाता है"],
+                        eligibility: ["भारत के सभी किसान", "मालिकों और बटाईदारों दोनों के लिए उपलब्ध", "भूमि के आकार पर कोई प्रतिबंध नहीं"],
+                        docs: ["आधार कार्ड", "भूमि विवरण (सर्वे नंबर)", "मोबाइल नंबर"],
+                        apply: ["स्थानीय कृषि विस्तार अधिकारी (AEO) से संपर्क करें", "अधिकारियों द्वारा आपके खेत से नमूना लिया जाएगा", "soilhealth.dac.gov.in पर ऑनलाइन डाउनलोड करें"],
+                        helpline: "040-23381333",
+                        website: "https://soilhealth.dac.gov.in"
+                    },
+                    te: {
+                        name: "సాయిల్ హెల్త్ కార్డ్ (నేల ఆరోగ్య పత్రం)",
+                        benefit_short: "ప్రతి 2 ఏళ్లకు ఒకసారి ఉచిత నేల పరీక్ష",
+                        type: "కేంద్ర ప్రభుత్వం",
+                        description: "పొలంలోని మట్టిని పరీక్షించి, అందులో ఏయే పోషకాలు ఎంత ఉన్నాయి, ఏ ఎరువులు వేయాలి అని చెప్పే ఉచిత పథకం.",
+                        benefits: ["12 రకాల పోషక స్థాయిల పరీక్ష", "సరైన ఎరువుల మోతాదుల సూచన", "ఖర్చు 10-15% వరకు తగ్గుతుంది", "దిగుబడి 5-10% పెరుగుతుంది", "ప్రతి రెండేళ్లకు ఒకసారి కార్డు ఇస్తారు"],
+                        eligibility: ["భారతదేశంలోని రైతులందరూ", "సొంత భూమి ఉన్నవారు మరియు కౌలు రైతులు", "భూమి పరిమితి లేదు"],
+                        docs: ["ఆధార్ కార్డు", "భూమి సర్వే నంబర్", "మొబైల్ నంబర్"],
+                        apply: ["మీ ఏఈఓ (AEO)ని సంప్రదించండి", "అధికారులే వచ్చి మట్టిని తీసుకెళ్తారు", "online లో soilhealth.dac.gov.in నుండి డౌన్‌లోడ్ చేయవచ్చు"],
+                        helpline: "040-23381333",
+                        website: "https://soilhealth.dac.gov.in"
+                    }
+                }
+            },
+            {
+                id: "rythu_bima",
+                tags: ["telangana"],
+                data: {
+                    en: {
+                        name: "Rythu Bima (Telangana)",
+                        benefit_short: "₹5,00,000 Life Insurance (Free)",
+                        type: "Telangana",
+                        description: "Compulsory life insurance for farmers. The Telangana government pays the entire premium.",
+                        benefits: ["₹5,00,000 claim paid to nominee", "Covers natural, accidental, or illness death", "Claim processed within 10 days", "Premium paid 100% by government"],
+                        eligibility: ["Permanent residents of Telangana", "Age 18 to 59 years", "Must own land recorded in Dharani"],
+                        docs: ["Pattadar Passbook", "Aadhaar Card", "Nominee's Aadhaar and Bank Details", "Mobile Number"],
+                        apply: ["Contact local AEO for enrollment", "No office visit needed", "Claims handled by LIC and Agriculture Dept"],
+                        helpline: "040-23383520",
+                        website: "https://rythubandhu.telangana.gov.in"
+                    },
+                    hi: {
+                        name: "रायथू बीमा (तेलंगाना)",
+                        benefit_short: "₹5,00,000 जीवन बीमा (मुफ्त)",
+                        type: "तेलंगाना",
+                        description: "किसानों के लिए अनिवार्य जीवन बीमा। तेलंगाना सरकार पूरा प्रीमियम देती है।",
+                        benefits: ["नामांकित व्यक्ति को ₹5,00,000 का दावा", "प्राकृतिक, आकस्मिक या बीमारी से मृत्यु को कवर करता है", "10 दिनों के भीतर दावे का निपटारा", "सरकार द्वारा 100% प्रीमियम भुगतान"],
+                        eligibility: ["तेलंगाना के स्थायी निवासी", "आयु 18 से 59 वर्ष", "धारणी में दर्ज भूमि होनी चाहिए"],
+                        docs: ["पट्टादार पासबुक", "आधार कार्ड", "नामांकित व्यक्ति का आधार और बैंक विवरण", "मोबाइल नंबर"],
+                        apply: ["नामांकन के लिए स्थानीय AEO से संपर्क करें", "कार्यालय जाने की आवश्यकता नहीं", "LIC और कृषि विभाग द्वारा दावों का प्रबंधन"],
+                        helpline: "040-23383520",
+                        website: "https://rythubandhu.telangana.gov.in"
+                    },
+                    te: {
+                        name: "రైతు భీమా (తెలంగాణ)",
+                        benefit_short: "₹5,00,000 జీవిత భీమా (ఉచితం)",
+                        type: "తెలంగాణ",
+                        description: "రైతు మరణిస్తే వారి కుటుంబానికి ఆసరాగా ఉండే ఉచిత జీవిత భీమా పథకం. ప్రీమియం అంతా ప్రభుత్వమే చెల్లిస్తుంది.",
+                        benefits: ["₹5,00,000 నామినీకి అందుతుంది", "సహజ మరణం, ప్రమాదం, అనారోగ్యం ఏ కారణమైనా వర్తిస్తుంది", "10 రోజుల్లోనే డబ్బులు అందుతాయి", "రైతు ఒక్క రూపాయి కూడా కట్టనక్కర్లేదు"],
+                        eligibility: ["తెలంగాణ నివాసి అయి ఉండాలి", "వయస్సు 18 నుండి 59 ఏళ్ల లోపు", "ధరణిలో భూమి నమోదై ఉండాలి"],
+                        docs: ["ఆధార్ కార్డు", "పట్టాదారు పాస్ బుక్", "నామినీ ఆధార్ మరియు బ్యాంక్ వివరాలు", "మొబైల్ నంబర్"],
+                        apply: ["ఏఈఓ (AEO)ని కలిసి వివరాలు ఇవ్వండి", "ఆఫీసుల చుట్టూ తిరగాల్సిన అవసరం లేదు", "LIC ద్వారా భీమా వస్తుంది"],
+                        helpline: "040-23383520",
+                        website: "https://rythubandhu.telangana.gov.in"
+                    }
+                }
+            },
+            {
+                id: "rythu_bharosa",
+                tags: ["telangana"],
+                data: {
+                    en: {
+                        name: "Rythu Bharosa (Telangana)",
+                        benefit_short: "₹12,000 per acre per year",
+                        type: "Telangana",
+                        description: "Investment support for farmers to buy seeds, fertilizers, and other inputs. Renamed from Rythu Bandhu in Jan 2025.",
+                        benefits: ["₹12,000 per acre every year", "Paid in 2 instalments (₹6,000 + ₹6,000)", "Direct Bank Transfer (DBT)", "No limit on acres"],
+                        eligibility: ["Landholders in Telangana", "Small, marginal and large farmers", "Must be in Dharani land records"],
+                        docs: ["Aadhaar Card", "Pattadar Passbook", "Bank Account Details", "Mobile Number"],
+                        apply: ["Online at rythubharosa.telangana.gov.in", "Apply at Gram Panchayat or Praja Palana centers", "Existing beneficiaries get auto-credits"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    },
+                    hi: {
+                        name: "रायथू भरोसा (तेलंगाना)",
+                        benefit_short: "₹12,000 प्रति एकड़ प्रति वर्ष",
+                        type: "तेलंगाना",
+                        description: "बीज, उर्वरक और अन्य सामग्री खरीदने के लिए किसानों को निवेश सहायता। जन 2025 में रायथू बंधु से नाम बदलकर रायथू भरोसा किया गया।",
+                        benefits: ["₹12,000 प्रति एकड़ हर साल", "2 किस्तों में भुगतान (₹6,000 + ₹6,000)", "प्रत्यक्ष लाभ हस्तांतरण (DBT)", "एकड़ की कोई सीमा नहीं"],
+                        eligibility: ["तेलंगाना में भूमि धारक", "छोटे, सीमांत और बड़े किसान", "धारणी भूमि रिकॉर्ड में होना चाहिए"],
+                        docs: ["आधार कार्ड", "पट्टादार पासबुक", "बैंक खाता विवरण", "मोबाइल नंबर"],
+                        apply: ["rythubharosa.telangana.gov.in पर ऑनलाइन", "ग्राम पंचायत या प्रजा पालना केंद्रों पर आवेदन करें", "मौजूदा लाभार्थियों को ऑटो-क्रेडिट मिलता है"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    },
+                    te: {
+                        name: "రైతు భరోసా (తెలంగాణ)",
+                        benefit_short: "ఎకరానికి ₹12,000 ప్రతి సంవత్సరం",
+                        type: "తెలంగాణ",
+                        description: "పెట్టుబడి సాయం కింద ఇచ్చే నగదు. జనవరి 2025 నుండి రైతు బంధు పేరును రైతు భరోసాగా మార్చి నగదు పెంచారు.",
+                        benefits: ["ఎకరాకు ₹12,000 ప్రతి ఏటా", "రెండు విడతలలో (₹6,000 + ₹6,000) అందుతాయి", "నేరుగా బ్యాంక్ ఖాతాకే జమ", "ఎన్ని ఎకరాలైనా వర్తిస్తుంది"],
+                        eligibility: ["తెలంగాణ పట్టాదారు రైతులందరికీ", "చిన్న, మధ్యతరగతి మరియు పెద్ద రైతులు", "ధరణిలో భూమి నమోదై ఉండాలి"],
+                        docs: ["ఆధార్ కార్డు", "పట్టాదారు పాస్ బుక్", "బ్యాంక్ పాస్ బుక్", "మొబైల్ నంబర్"],
+                        apply: ["rythubharosa.telangana.gov.in లో ఆన్‌లైన్", "గ్రామ పంచాయతీ లేదా ప్రజా పాలన సెంటర్లలో దరఖాస్తు చేయవచ్చు"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    }
+                }
+            },
+            {
+                id: "pm_kisan",
+                tags: ["central"],
+                data: {
+                    en: {
+                        name: "PM-KISAN (Central)",
+                        benefit_short: "₹6,000 per year (Direct Bank Transfer)",
+                        type: "Central",
+                        description: "A central scheme providing income support to all land-owning farmer families.",
+                        benefits: ["₹6,000 every year", "Paid in 3 instalments of ₹2,000", "Direct to Aadhaar-linked bank account", "Fully funded by Central Govt"],
+                        eligibility: ["Land-owning farmer families", "Small and large landholders eligible", "Institutional owners excluded"],
+                        docs: ["Aadhaar Card (e-KYC mandatory)", "Land Records / Passbook", "Aadhaar-linked Bank Account", "Mobile Number"],
+                        apply: ["Online at pmkisan.gov.in", "Visit nearest Common Service Centre (CSC)", "New Farmer Registration feature online"],
+                        helpline: "155261",
+                        website: "https://pmkisan.gov.in"
+                    },
+                    hi: {
+                        name: "पीएम-किसान (पी.एम. किसान)",
+                        benefit_short: "₹6,000 प्रति वर्ष (प्रत्यक्ष बैंक हस्तांतरण)",
+                        type: "केंद्रीय",
+                        description: "सभी भूमि-धारक किसान परिवारों को आय सहायता प्रदान करने वाली एक केंद्रीय योजना।",
+                        benefits: ["₹6,000 हर साल", "₹2,000 की 3 किस्तों में भुगतान", "आधार-लिंक्ड बैंक खाते में सीधा भुगतान", "पूरी तरह से केंद्र सरकार द्वारा वित्त पोषित"],
+                        eligibility: ["भूमि-धारक किसान परिवार", "छोटे और बड़े भूमि धारक पात्र", "संस्थागत मालिक बाहर"],
+                        docs: ["आधार कार्ड (ई-केवाईसी अनिवार्य)", "भूमि रिकॉर्ड / पासबुक", "आधार-लिంక్డ్ बैंक खाता", "मोबाइल नंबर"],
+                        apply: ["pmkisan.gov.in पर ऑनलाइन", "निकटतम सामान्य सेवा केंद्र (CSC) पर जाएं", "नई किसान पंजीकरण सुविधा ऑनलाइन उपलब्ध है"],
+                        helpline: "155261",
+                        website: "https://pmkisan.gov.in"
+                    },
+                    te: {
+                        name: "పీఎం-కిసాన్ (PM-KISAN)",
+                        benefit_short: "ప్రతి సంవత్సరం ₹6,00,0 (నేరుగా బ్యాంక్ ఖాతాకు)",
+                        type: "కేంద్ర ప్రభుత్వం",
+                        description: "సొంతంగా సాగు భూమి గల ప్రతి రైతు కుటుంబానికి కేంద్ర ప్రభుత్వం ఇచ్చే ఆర్థిక సాయం.",
+                        benefits: ["ప్రతి సంవత్సరం ₹6,000 నగదు", "మూడు విడతలలో ₹2,000 చొప్పున జమ", "నేరుగా ఆధార్ లింక్ అయిన బ్యాంక్ ఖాతాకు", "సంపూర్ణ కేంద్ర నిధులతో నడుస్తుంది"],
+                        eligibility: ["సాగు భూమి ఉన్న రైతులందరూ", "చిన్న, పెద్ద రైతులందరికీ వర్తిస్తుంది", "ప్రభుత్వ ఉద్యోగులు, పించన్ దారులకు మినహాయింపు ఉంటుంది"],
+                        docs: ["ఆధార్ కార్డు (e-KYC తప్పనిసరి)", "పట్టాదారు పాస్ బుక్", "ఆధార్ లింక్డ్ బ్యాంక్ ఖాతా", "మొబైల్ నంబర్"],
+                        apply: ["pmkisan.gov.in వెబ్‌సైట్‌లో", "దగ్గరలోని CSC (Common Service Centre) లో", "ఆన్‌లైన్‌లో 'New Farmer Registration' ద్వారా"],
+                        helpline: "155261",
+                        website: "https://pmkisan.gov.in"
+                    }
+                }
+            },
+            {
+                id: "pmfby",
+                tags: ["central"],
+                data: {
+                    en: {
+                        name: "PMFBY Crop Insurance",
+                        benefit_short: "Low Premiums: Kharif 2%, Rabi 1.5%",
+                        type: "Central",
+                        description: "Affordable crop insurance to protect against natural calamities and pest attacks.",
+                        benefits: ["Kharif: 2% premium", "Rabi: 1.5% premium", "Horticulture: 5% premium", "Covers flood, drought, and pests", "Automatic for bank loan farmers"],
+                        eligibility: ["All farmers including tenants", "Must be sowing notified crops", "Loanee and Non-loanee farmers"],
+                        docs: ["Aadhaar Card", "Land documents / Sowing Certificate", "Bank Passbook", "Tenancy agreement (for tenants)"],
+                        apply: ["Online at pmfby.gov.in", "Via bank branches for loanee farmers", "Common Service Centres (CSC)"],
+                        helpline: "1800-180-1551",
+                        website: "https://pmfby.gov.in"
+                    },
+                    hi: {
+                        name: "पीएमएफबीवाई फसल बीमा",
+                        benefit_short: "कम प्रीमियम: खरीफ 2%, रबी 1.5%",
+                        type: "केंद्रीय",
+                        description: "प्राकृतिक आपदाओं और कीट हमलों से बचाने के लिए सस्ती फसल बीमा।",
+                        benefits: ["खरीफ: 2% प्रीमियम", "रबी: 1.5% प्रीमियम", "बागवानी: 5% प्रीमियम", "बाढ़, सूखा और कीटों को कवर करता है", "बैंक ऋण किसानों के लिए स्वचालित"],
+                        eligibility: ["बटाईदारों सहित सभी किसान", "अधिसूचित फसलों की बुआई करनी चाहिए", "ऋणी और गैर-ऋणी किसान"],
+                        docs: ["आधार कार्ड", "भूमि दस्तावेज / बुवाई प्रमाण पत्र", "बैंक पासबुक", "किरायेदारी समझौता (बटाईदारों के लिए)"],
+                        apply: ["pmfby.gov.in पर ऑनलाइन", "ऋणी किसानों के लिए बैंक शाखाओं के माध्यम से", "सामान्य सेवा केंद्र (CSC)"],
+                        helpline: "1800-180-1551",
+                        website: "https://pmfby.gov.in"
+                    },
+                    te: {
+                        name: "పంట భీమా (PMFBY)",
+                        benefit_short: "తక్కువ ప్రీమియం: ఖరీఫ్ 2%, రబీ 1.5%",
+                        type: "కేంద్ర ప్రభుత్వం",
+                        description: "పంట నష్టపోయినప్పుడు రైతులకు అండగా ఉండే అతి తక్కువ ప్రీమియం కలిగిన భీమా పథకం.",
+                        benefits: ["ఖరీఫ్ పంటలకు: 2% ప్రీమియం", "రబీ పంటలకు: 1.5% ప్రీమియం", "తోట పంటలకు: 5% ప్రీమియం", "ప్రకృతి వైపరీత్యాలు, తెగుళ్ల నష్టాన్ని కవర్ చేస్తుంది", "బ్యాంకు రుణం ఉన్నవారికి ఆటోమేటిక్ గా వర్తిస్తుంది"],
+                        eligibility: ["కౌలు రైతులతో సహా అందరూ అర్హులు", "నోటిఫైడ్ పంటలు వేసిన వారు", "రుణం ఉన్నవారు మరియు లేని వారు"],
+                        docs: ["ఆధార్ కార్డు", "భూమి వివరాలు / విత్తే ధృవీకరణ పత్రం", "బ్యాంక్ పాస్ బుక్", "కౌలు పత్రాలు"],
+                        apply: ["pmfby.gov.in లో ఆన్‌లైన్", "బ్యాంకు ద్వారా (రుణ గ్రహీతలకు)", "దగ్గరలోని CSC లలో"],
+                        helpline: "1800-180-1551",
+                        website: "https://pmfby.gov.in"
+                    }
+                }
+            },
+            {
+                id: "pmkmy",
+                tags: ["central"],
+                data: {
+                    en: {
+                        name: "PM Kisan Maan Dhan",
+                        benefit_short: "₹3,000/month Pension after 60",
+                        type: "Central",
+                        description: "A voluntary pension scheme for small and marginal farmers with matching government contribution.",
+                        benefits: ["₹3,000 monthly pension for life", "Spouse gets 50% family pension", "Govt matching contribution", "Flexible exit options"],
+                        eligibility: ["Small & marginal farmers (up to 5 acres)", "Age 18 to 40 years", "PM-KISAN beneficiaries preferred"],
+                        docs: ["Aadhaar Card", "Bank Passbook", "Land documents", "Mobile Number"],
+                        apply: ["Nearest Common Service Centre (CSC)", "Online at maandhan.in", "Auto-deduction from PM-KISAN possible"],
+                        helpline: "1800-267-6888",
+                        website: "https://maandhan.in"
+                    },
+                    hi: {
+                        name: "पीएम किसान मान धन",
+                        benefit_short: "60 के बाद ₹3,000/माह पेंशन",
+                        type: "केंद्रीय",
+                        description: "मिलान सरकारी योगदान के साथ छोटे और सीमांत किसानों के लिए एक स्वैच्छिक पेंशन योजना।",
+                        benefits: ["जीवन भर के लिए ₹3,000 मासिक पेंशन", "पति/पत्नी को 50% पारिवारिक पेंशन", "सरकारी मिलान योगदान", "लचीले निकास विकल्प"],
+                        eligibility: ["छोटे और सीमांत किसान (5 एकड़ तक)", "आयु 18 से 40 वर्ष", "PM-KISAN लाभार्थियों को प्राथमिकता"],
+                        docs: ["आधार कार्ड", "बैंक पासबुक", "भूमि दस्तावेज", "मोबाइल नंबर"],
+                        apply: ["निकटतम सामान्य सेवा केंद्र (CSC)", "maandhan.in पर ऑनलाइन", "PM-KISAN से ऑटो-डिडक्शन संभव"],
+                        helpline: "1800-267-6888",
+                        website: "https://maandhan.in"
+                    },
+                    te: {
+                        name: "కిసాన్ పెన్షన్ (PM-KMY)",
+                        benefit_short: "60 ఏళ్ల తర్వాత ₹3,000 నెల నెలా పించన్",
+                        type: "కేంద్ర ప్రభుత్వం",
+                        description: "రైతుకు వృద్ధాప్యంలో భరోసా ఇచ్చే పెన్షన్ పథకం. సమానమైన మొత్తాన్ని ప్రభుత్వం కూడా జమ చేస్తుంది.",
+                        benefits: ["నెల నెలా ₹3,000 పించన్ జీవితాంతం", "భార్య/భర్తకు 50% కుటుంబ పించన్", "ప్రభుత్వం కూడా మీ వాటా అంతే జమ చేస్తుంది", "ఏప్పుడైనా పథకం నుండి తప్పుకునే వెసులుబాటు"],
+                        eligibility: ["చిన్న మరియు సన్నకారు రైతులు (5 ఎకరాల లోపు)", "వయస్సు 18 నుండి 40 ఏళ్ల మధ్య", "పీఎం-కిసాన్ లబ్ధిదారులు దీనికి త్వరగా అర్హులు"],
+                        docs: ["ఆధార్ కార్డు", "బ్యాంక్ పాస్ బుక్", "భూమి పత్రాలు", "మొబైల్ నంబర్"],
+                        apply: ["దగ్గరలోని CSC సెంటర్ లో", "maandhan.in వెబ్‌సైట్‌లో", "పీఎం-కిసాన్ డబ్బుల నుండి కట్ అయ్యే సౌకర్యం"],
+                        helpline: "1800-267-6888",
+                        website: "https://maandhan.in"
+                    }
+                }
+            },
+            {
+                id: "kcc",
+                tags: ["central", "tenant"],
+                data: {
+                    en: {
+                        name: "Kisan Credit Card (KCC)",
+                        benefit_short: "4% Interest Rate (Prompt Repayment)",
+                        type: "Central",
+                        description: "A revolving credit card for farmers to buy inputs and cover maintainance without high-interest loans.",
+                        benefits: ["Low interest rate (4%)", "Up to ₹3 Lakh credit limit", "Covers farm maintenance & livestock", "Accident insurance of ₹50,000", "Revolving credit: borrow and repay"],
+                        eligibility: ["All farmers including tenants", "Self Help Groups (SHG)", "Fishermen and Dairy farmers"],
+                        docs: ["Aadhaar & PAN Card", "Pattadar Passbook", "Bank Account Details", "Tenancy documents (for tenants)"],
+                        apply: ["Visit any bank branch", "Fill simple KCC application", "Apply online via PM-Kisan portal"],
+                        helpline: "022-26539895",
+                        website: "https://pmkisan.gov.in"
+                    },
+                    hi: {
+                        name: "किसान क्रेडिट कार्ड (KCC)",
+                        benefit_short: "4% ब्याज दर (समय पर पुनर्भुगतान)",
+                        type: "केंद्रीय",
+                        description: "उच्च-ब्याज ऋण के बिना इनपुट खरीदने और रखरखाव को कवर करने के लिए किसानों के लिए एक रिवॉल्विंग क्रेडिट कार्ड।",
+                        benefits: ["कम ब्याज दर (4%)", "₹3 लाख तक की क्रेडिट सीमा", "खेत रखरखाव और पशुधन को कवर करता है", "₹50,000 का दुर्घटना बीमा", "रिवॉल्विंग क्रेडिट: उधार लें और चुकाएं"],
+                        eligibility: ["बटाईदारों सहित सभी किसान", "स्वयं सहायता समूह (SHG)", "मछुआरे और डेयरी किसान"],
+                        docs: ["आधार और पैन कार्ड", "पट्टादार पासबुक", "बैंक खाता विवरण", "किरायेदारी दस्तावेज (बटाईदारों के लिए)"],
+                        apply: ["किसी भी बैंक शाखा में जाएं", "साधारण KCC आवेदन भरें", "पीएम-किसान पोर्टल के माध्यम से ऑनलाइन आवेदन करें"],
+                        helpline: "022-26539895",
+                        website: "https://pmkisan.gov.in"
+                    },
+                    te: {
+                        name: "కిసాన్ క్రెడిట్ కార్డ్ (KCC)",
+                        benefit_short: "కేవలం 4% వడ్డీ (సకాలంలో చెల్లిస్తే)",
+                        type: "కేంద్ర ప్రభుత్వం",
+                        description: "తక్కువ వడ్డీతో పెట్టుబడి కోసం బ్యాంకుల నుండి అప్పు తీసుకునే వెసులుబాటు కలిగించే కార్డ్.",
+                        benefits: ["కేవలం 4% తక్కువ వడ్డీ", "₹3 లక్షల వరకు క్రెడిట్ పరిమితి", "వ్యవసాయం మరియు పశుపోషణకు వాడుకోవచ్చు", "రూ. 50,000 ప్రమాద భీమా ఉచితం", "తిరిగి కట్టి మళ్ళీ తీసుకునే సదుపాయం"],
+                        eligibility: ["కౌలు రైతులతో సహా అందరూ అర్హులు", "మహిళా స్వయం సహాయక సంఘాలు", "మత్స్యకారులు మరియు పాడి రైతులు"],
+                        docs: ["ఆధార్ మరియు పాన్ కార్డ్", "పట్టాదారు పాస్ బుక్", "బ్యాంక్ ఖాతా వివరాలు", "కౌలు ఒప్పంద పత్రాలు"],
+                        apply: ["ఏదైనా బ్యాంకు శాఖను సంప్రదించండి", "KCC దరఖాస్తు ఫారం నింపండి", "ఆన్‌లైన్‌లో పీఎం-కిసాన్ పోర్టల్ ద్వారా"],
+                        helpline: "022-26539895",
+                        website: "https://pmkisan.gov.in"
+                    }
+                }
+            },
+            {
+                id: "iab",
+                tags: ["telangana", "tenant"],
+                data: {
+                    en: {
+                        name: "Indiramma Atmiya Bharosa",
+                        benefit_short: "₹12,000 per year (Tenant Farmers)",
+                        type: "Telangana",
+                        description: "Specifically for tenant farmers who lease land, providing financial aid like Rythu Bharosa.",
+                        benefits: ["₹12,000 per year assistance", "Paid via Direct Bank Transfer (DBT)", "Support for land-less cultivators"],
+                        eligibility: ["Tenant farmers in Telangana", "Age 18 to 59 years", "Must have lease/tenancy documents"],
+                        docs: ["Aadhaar Card", "Lease/Tenancy Agreement", "Bank Passbook", "Residence Proof"],
+                        apply: ["Visit Gram Panchayat or CSC", "Submit Praja Palana application", "Verification by Revenue Dept"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    },
+                    hi: {
+                        name: "इंदिराम्मा आत्मीय भरोसा",
+                        benefit_short: "₹12,000 प्रति वर्ष (बटाईदार किसान)",
+                        type: "तेलंगाना",
+                        description: "विशेष रूप से पट्टे पर जमीन लेने वाले बटाईदार किसानों के लिए, रायथू भरोसा जैसी वित्तीय सहायता प्रदान करना।",
+                        benefits: ["₹12,000 प्रति वर्ष सहायता", "प्रत्यक्ष लाभ हस्तांतरण (DBT) के माध्यम से भुगतान", "भूमिहीन खेती करने वालों के लिए सहायता"],
+                        eligibility: ["तेलंगाना में बटाईदार किसान", "आयु 18 से 59 वर्ष", "पट्टा/किरायेदारी दस्तावेज होने चाहिए"],
+                        docs: ["आधार कार्ड", "पट्टा/किराया समझौता", "बैंक पासबुक", "निवास प्रमाण पत्र"],
+                        apply: ["ग्राम पंचायत या CSC पर जाएं", "प्रजा पालना आवेदन जमा करें", "राजस्व विभाग द्वारा सत्यापन"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    },
+                    te: {
+                        name: "ఇందిరమ్మ ఆత్మీయ భరోసా",
+                        benefit_short: "ప్రతి సంవత్సరం ₹12,000 (కౌలు రైతులకు)",
+                        type: "తెలంగాణ",
+                        description: "సొంత భూమి లేని కౌలు రైతులకు ప్రభుత్వం ఇచ్చే సాగు పెట్టుబడి సాయం.",
+                        benefits: ["సంవత్సరానికి ₹12,000 సహాయం", "నేరుగా బ్యాంక్ ఖాతాకు జమ", "కౌలు చేసుకునే నిరుపేద రైతులకు అండ"],
+                        eligibility: ["తెలంగాణలోని కౌలు రైతులు", "వయస్సు 18 నుండి 59 ఏళ్లు", "కౌలు పత్రాలు కలిగి ఉండాలి"],
+                        docs: ["ఆధార్ కార్డు", "కౌలు ఒప్పంద పత్రాలు", "బ్యాంక్ పాస్ బుక్", "మునిసిపాలిటీ/పంచాయితీ సర్టిఫికేట్"],
+                        apply: ["గ్రామ పంచాయతీ లేదా మీసేవ కేంద్రంలో", "ప్రజా పాలన దరఖాస్తు ద్వారా", "రెవెన్యూ అధికారుల విచారణ తర్వాత సాయం అందుతుంది"],
+                        helpline: "040-23383520",
+                        website: "https://rythubharosa.telangana.gov.in"
+                    }
+                }
+            }
+        ];
+
+        let currentLang = 'en';
+        let currentFilter = 'all';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Update UI buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${lang}'`));
+            });
+
+            // Update static texts
+            const t = translations[lang];
+            document.getElementById('header-title').innerText = t.headerTitle;
+            document.getElementById('header-subtitle').innerText = t.headerSubtitle;
+            document.getElementById('search-input').placeholder = t.searchPlaceholder;
+            
+            document.querySelector('[data-filter="all"]').innerText = t.allSchemes;
+            document.querySelector('[data-filter="central"]').innerText = t.centralSchemes;
+            document.querySelector('[data-filter="telangana"]').innerText = t.telanganaSchemes;
+            document.querySelector('[data-filter="scst"]').innerText = t.scstBenefits;
+            document.querySelector('[data-filter="tenant"]').innerText = t.tenantFarmers;
+
+            document.querySelectorAll('.label-what').forEach(el => el.innerText = t.labelWhat);
+            document.querySelectorAll('.label-benefit').forEach(el => el.innerText = t.labelBenefit);
+            document.querySelectorAll('.label-eligibility').forEach(el => el.innerText = t.labelEligibility);
+            document.querySelectorAll('.label-docs').forEach(el => el.innerText = t.labelDocs);
+            document.querySelectorAll('.label-apply').forEach(el => el.innerText = t.labelApply);
+            document.querySelectorAll('.label-helpline').forEach(el => el.innerText = t.labelHelpline);
+            document.querySelectorAll('.label-website').forEach(el => el.innerText = t.labelWebsite);
+            
+            document.querySelector('footer p').innerText = t.footer;
+
+            renderSchemes();
+        }
+
+        function setFilter(filter, el) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            el.classList.add('active');
+            renderSchemes();
+        }
+
+        function filterSchemes() {
+            renderSchemes();
+        }
+
+        function renderSchemes() {
+            const grid = document.getElementById('schemes-grid');
+            const searchText = document.getElementById('search-input').value.toLowerCase();
+            const t = translations[currentLang];
+
+            grid.innerHTML = '';
+
+            const filtered = schemes.filter(s => {
+                const matchesFilter = currentFilter === 'all' || s.tags.includes(currentFilter);
+                const schemeData = s.data[currentLang];
+                const matchesSearch = schemeData.name.toLowerCase().includes(searchText) || 
+                                    schemeData.description.toLowerCase().includes(searchText);
+                return matchesFilter && matchesSearch;
+            });
+
+            filtered.forEach(s => {
+                const schemeData = s.data[currentLang];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.onclick = () => openModal(s.id);
+
+                card.innerHTML = `
+                    <div>
+                        <span class="card-tag">${schemeData.type}</span>
+                        <h2>${schemeData.name}</h2>
+                        <p class="benefit">${schemeData.benefit_short}</p>
+                    </div>
+                    <div class="arrow">
+                        <span>${t.learnMore}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal(id) {
+            const scheme = schemes.find(s => s.id === id);
+            const data = scheme.data[currentLang];
+            const t = translations[currentLang];
+
+            document.getElementById('modal-tag').innerText = data.type;
+            document.getElementById('modal-title').innerText = data.name;
+            document.getElementById('modal-desc').innerText = data.description;
+
+            const benefitsList = document.getElementById('modal-benefits');
+            benefitsList.innerHTML = '';
+            data.benefits.forEach(b => benefitsList.innerHTML += `<li>${b}</li>`);
+
+            const eligibilityList = document.getElementById('modal-eligibility');
+            eligibilityList.innerHTML = '';
+            data.eligibility.forEach(e => eligibilityList.innerHTML += `<li>${e}</li>`);
+
+            const docsList = document.getElementById('modal-docs');
+            docsList.innerHTML = '';
+            data.docs.forEach(d => docsList.innerHTML += `<li>${d}</li>`);
+
+            const applyList = document.getElementById('modal-apply');
+            applyList.innerHTML = '';
+            data.apply.forEach(a => applyList.innerHTML += `<li>${a}</li>`);
+
+            document.getElementById('modal-helpline').innerText = data.helpline;
+            
+            const webLink = document.getElementById('modal-website');
+            webLink.href = data.website;
+            webLink.innerText = data.website.replace('https://', '');
+
+            document.getElementById('modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(e) {
+            document.getElementById('modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initialize with English
+        setLanguage('en');
+    </script>
+</body>
+</html>
