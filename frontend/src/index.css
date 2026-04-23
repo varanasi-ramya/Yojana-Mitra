@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #5E0006;
+  --color-mid: #9B0F06;
+  --color-accent: #D53E0F;
+  --color-cream: #EED9B9;
+  --color-bg: #FAF6EF;
+  --color-text: #1A1A1A;
+  --color-text-soft: #555555;
+  --color-border: #E0D5C5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', 'Noto Sans Telugu', 'Noto Sans Devanagari', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for message area */
+.messages-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.messages-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.messages-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}

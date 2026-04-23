@@ -1,0 +1,82 @@
+SCHEME NAME
+PMFBY — Pradhan Mantri Fasal Bima Yojana
+Also called: PM Crop Insurance, Fasal Bima Yojana, Prime Minister Crop Insurance Scheme
+
+TYPE
+Central Government — Ministry of Agriculture and Farmers Welfare
+Implemented through empanelled insurance companies in each state
+
+WHAT IT IS
+A crop insurance scheme that compensates farmers when crops fail due to natural calamities like floods, drought, hailstorm, cyclone, pest attacks, or disease. Farmers pay a very small premium — the government pays the remaining 80 to 95 percent of the total premium.
+
+BENEFIT / COVERAGE
+- Full compensation for crop loss due to: drought, flood, cyclone, hailstorm, landslide, natural fire, lightning, pest and disease outbreak
+- Post-harvest losses covered for 14 days after harvest
+- Localised calamities like hailstorm and landslide affecting specific farms are covered
+- Sum insured is based on crop type and area — set by state government each season
+- Compensation paid directly to farmer's bank account via DBT
+
+PREMIUM RATES (farmer's share only)
+- Kharif crops (rice, maize, cotton, soyabean): 2% of sum insured
+- Rabi crops (wheat, mustard, gram): 1.5% of sum insured
+- Horticulture and commercial crops: 5% of sum insured
+- Government pays remaining premium — can be 80 to 95% of total premium
+
+WHO IS ELIGIBLE
+- All farmers — both loanee and non-loanee farmers
+- Farmers growing notified crops in notified areas
+- Tenant and sharecropper farmers are also eligible
+- Loanee farmers (those with crop loans from banks) are automatically enrolled unless they opt out
+
+WHO IS NOT ELIGIBLE
+- Farmers growing non-notified crops in that season and district
+- Farmers who miss the application deadline for that season
+
+DOCUMENTS REQUIRED
+- Aadhaar Card
+- Land ownership documents / Pattadar Passbook
+- Bank account details / passbook
+- Sowing certificate from Village Revenue Officer or Agriculture Extension Officer (AEO)
+- For tenant farmers: tenancy or sharecropping agreement
+
+HOW TO APPLY
+
+For loanee farmers (those with crop loans from a bank):
+Step 1 — You are automatically enrolled when you take a crop loan from a bank
+Step 2 — Premium is deducted from your loan amount by the bank
+Step 3 — Check with your bank to confirm enrolment and get your policy number
+Step 4 — You can opt out if you do not want insurance — inform bank before deadline
+
+For non-loanee farmers:
+Step 1 — Visit your nearest bank branch, CSC, or insurance company agent before the season deadline
+Step 2 — Fill the PMFBY proposal form with your crop and land details
+Step 3 — Pay your share of premium (2% for Kharif, 1.5% for Rabi)
+Step 4 — Receive a policy number — save it carefully
+
+Online:
+Visit pmfby.gov.in — Farmer Corner — Apply for Crop Insurance
+
+IMPORTANT DEADLINE
+Must apply before the cutoff date for each season — usually 2 to 3 weeks before sowing begins
+Missing the deadline means you cannot be insured for that season
+
+HOW TO CLAIM AFTER CROP LOSS
+Step 1 — Report within 72 hours of crop damage
+Step 2 — Call PMFBY helpline 1800-180-1551 OR inform your AEO or local agriculture office
+Step 3 — Upload photos of crop damage on the Crop Insurance app if possible
+Step 4 — Government officials conduct Crop Cutting Experiments (CCE) to assess loss
+Step 5 — Compensation is calculated based on the assessment
+Step 6 — Money transferred to your bank account via DBT
+
+For mid-season losses due to flood or drought:
+Report immediately to AEO or insurance company — do not wait for harvest
+
+OFFICIAL WEBSITE
+pmfby.gov.in
+
+HELPLINE
+1800-180-1551 (toll free)
+Email: help.agri-insurance@gov.in
+
+LAST UPDATED
+2024-25 Kharif and Rabi season

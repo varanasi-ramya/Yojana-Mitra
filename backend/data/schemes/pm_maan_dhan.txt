@@ -1,0 +1,78 @@
+SCHEME NAME
+PM Kisan Maan Dhan Yojana
+Also called: PM KMY, Kisan Pension Scheme, Pradhan Mantri Kisan Maan Dhan
+
+TYPE
+Central Government — Ministry of Agriculture and Farmers Welfare
+Implemented through Life Insurance Corporation of India (LIC)
+
+WHAT IT IS
+A voluntary pension scheme for small and marginal farmers. If you join between age 18 and 40 and contribute a small fixed amount every month, the government contributes an equal amount every month. After you turn 60, you receive Rs.3,000 every month as pension for the rest of your life.
+
+BENEFIT
+- Rs.3,000 per month pension after age 60 — for life
+- On death of farmer after age 60: spouse receives Rs.1,500 per month as family pension
+- Government matches every rupee the farmer contributes — 50:50 contribution
+- If farmer exits the scheme before age 60: gets back own contribution with savings bank interest
+- Monthly contribution ranges from Rs.55 to Rs.200 depending on the age at enrolment
+
+MONTHLY CONTRIBUTION TABLE
+Age 18 — Farmer pays Rs.55/month — Government pays Rs.55/month
+Age 20 — Farmer pays Rs.61/month — Government pays Rs.61/month
+Age 25 — Farmer pays Rs.80/month — Government pays Rs.80/month
+Age 30 — Farmer pays Rs.110/month — Government pays Rs.110/month
+Age 35 — Farmer pays Rs.150/month — Government pays Rs.150/month
+Age 40 — Farmer pays Rs.200/month — Government pays Rs.200/month
+
+WHO IS ELIGIBLE
+- Small and marginal farmers who own up to 2 hectares (approximately 5 acres) of cultivable land
+- Age between 18 and 40 years at the time of enrolment
+- Must be a PM-KISAN beneficiary — or enrol in PM-KISAN first before applying
+
+WHO IS NOT ELIGIBLE
+- Farmers older than 40 years at the time of application
+- Farmers owning more than 2 hectares (5 acres) of land
+- Farmers already covered under other statutory social security schemes: EPFO, NPS, ESIC
+- Income tax payers
+- Government employees
+
+DOCUMENTS REQUIRED
+- Aadhaar Card
+- Bank account passbook / savings bank account details
+- Mobile number linked to Aadhaar
+- Land ownership documents (Pattadar Passbook)
+
+HOW TO APPLY
+Easiest method — visit nearest Common Service Centre (CSC):
+Step 1 — Go to your nearest CSC with Aadhaar card and bank passbook
+Step 2 — CSC operator registers you on the PM Maan Dhan portal
+Step 3 — Choose your monthly contribution based on your current age
+Step 4 — Make the first month's contribution payment at the CSC
+Step 5 — From the next month, contribution is automatically deducted from your bank account monthly
+
+Via PM-KISAN instalment (very convenient):
+Your monthly contribution can be auto-deducted from your PM-KISAN instalment directly — no need to remember to pay monthly
+
+Online self-enrolment:
+Visit maandhan.in
+Click Farmer
+Click Self Enrolment
+Enter your Aadhaar number and OTP
+Fill in bank details and land details
+Choose monthly contribution amount
+
+IMPORTANT POINTS
+- This scheme is voluntary — you choose to join
+- The younger you join, the lower your monthly contribution
+- Even if land ownership changes later, your pension is not affected once enrolled
+- In case of farmer's permanent disability before age 60: spouse can continue contributing and claim pension at 60
+- In case of farmer's death before age 60: spouse can either exit and take back contributions with interest, or continue contributing and claim pension at 60
+
+OFFICIAL WEBSITE
+maandhan.in
+
+HELPLINE
+1800-267-6888 (toll free)
+
+LAST UPDATED
+2024

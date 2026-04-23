@@ -1,0 +1,65 @@
+SCHEME NAME
+Soil Health Card Scheme (SHC)
+Also called: Mitti Ka Sehat Patrak, Bhoomi Swasthya Patra, Soil Testing Scheme
+
+TYPE
+Central Government — Ministry of Agriculture and Farmers Welfare, Government of India
+
+WHAT IT IS
+A free scheme where the government tests your farm soil in a laboratory and gives you a printed card showing the nutrient levels in your soil and exactly which fertilizers to use for your specific crop. Using the right fertilizers in the right amounts saves money and grows better crops.
+
+WHAT THE SOIL HEALTH CARD TELLS YOU
+12 parameters are tested and reported:
+- Primary nutrients: Nitrogen (N), Phosphorus (P), Potassium (K)
+- Secondary/physical: pH level, Electrical Conductivity, Organic Carbon
+- Micronutrients: Sulphur, Zinc, Boron, Iron, Manganese, Copper
+- Each nutrient shown as: Low, Medium, or High
+- Recommended fertilizer dose for your soil and your specific crop
+- Suggested soil improvement methods if soil quality is poor
+
+BENEFIT
+- Free soil testing — no cost to farmer at any step
+- Free Soil Health Card printed and given to farmer
+- Saves 10 to 15 percent on fertilizer costs by using correct doses
+- Can increase crop yield by 5 to 10 percent
+- Soil is tested once every 2 years
+
+WHO IS ELIGIBLE
+- All farmers in India — no restriction on land size, landholding type, or crop type
+- Both land-owning and tenant farmers can request soil testing
+
+DOCUMENTS REQUIRED
+- Aadhaar Card
+- Land details — survey number or khasra number of the field to be tested
+- Mobile number — status updates and card download link sent via SMS
+
+HOW TO GET YOUR SOIL TESTED
+Step 1 — Contact your local Agriculture Extension Officer (AEO) or Village Agriculture Officer
+Step 2 — Request soil testing for your field — mention the survey number and crop you grow
+Step 3 — AEO or government official visits your farm and collects a soil sample
+Step 4 — Sample is sent to the nearest Soil Testing Laboratory (STL)
+Step 5 — Results are ready in 7 to 10 working days
+Step 6 — Soil Health Card is printed and either given to you in person or sent via SMS as a download link
+Step 7 — You can also download it yourself from the website
+
+HOW TO DOWNLOAD YOUR CARD ONLINE
+Visit soilhealth.dac.gov.in
+Click Farmer
+Enter your state, district, sub-district, and village
+Your Soil Health Card will appear — download or print it
+
+HOW TO USE YOUR SOIL HEALTH CARD
+- Show the card to your fertilizer dealer and ask for exactly the recommended fertilizers and doses
+- Follow the crop-specific recommendations on the card
+- If the card shows a nutrient is Low, focus on adding that nutrient first
+- Keep the card safe — it is valid for 2 years
+
+OFFICIAL WEBSITE
+soilhealth.dac.gov.in
+
+HELPLINE
+Contact your local Agriculture Extension Officer (AEO)
+State Agriculture Department: 040-23381333
+
+LAST UPDATED
+2024

@@ -1,0 +1,65 @@
+{
+  "app": {
+    "title": "Yojana Mitra",
+    "subtitle": "Your Agriculture Scheme Guide"
+  },
+  "landing": {
+    "hero_title": "Every Government Scheme. Every Farmer. One Place.",
+    "hero_sub": "Ask about Rythu Bharosa, PM-KISAN, crop insurance and more — in English, Telugu, or Hindi.",
+    "cta": "Ask Yojana Mitra",
+    "free_note": "Free · No login required",
+    "schemes_covered": "Schemes covered"
+  },
+  "onboarding": {
+    "title": "Tell us about yourself",
+    "subtitle": "This helps us give more relevant answers",
+    "name": "Your name",
+    "name_placeholder": "Enter your name",
+    "district": "Your district",
+    "district_placeholder": "Select district",
+    "land": "Land owned (acres)",
+    "land_placeholder": "e.g. 3",
+    "start": "Start chatting",
+    "skip": "Skip for now"
+  },
+  "chat": {
+    "welcome": "Hello! I am Yojana Mitra. Ask me anything about government agriculture schemes in Telangana.",
+    "placeholder": "Ask about any scheme...",
+    "send": "Send",
+    "thinking": "Finding answer...",
+    "sources_label": "Sources",
+    "error": "Something went wrong. Please try again.",
+    "guided": {
+      "docs": "What documents are needed?",
+      "money": "How much money will I get?",
+      "eligibility": "What is the eligibility criteria?",
+      "process": "What is the application process?",
+      "deadline": "What is the deadline?"
+    }
+  },
+  "prompts": {
+    "q1": "TMIP (Drip/Sprinkler)",
+    "q2": "Soil Health Card",
+    "q3": "Rythu Bima",
+    "q4": "Rythu Bharosa",
+    "q5": "PM-KISAN",
+    "q6": "PMFBY Crop Insurance",
+    "q7": "PM Kisan Maan Dhan",
+    "q8": "Kisan Credit Card",
+    "q9": "Indiramma Atmiya Bharosa"
+  },
+  "schemes": {
+    "s1": "TMIP (Drip/Sprinkler)",
+    "s2": "Soil Health Card",
+    "s3": "Rythu Bima",
+    "s4": "Rythu Bharosa",
+    "s5": "PM-KISAN",
+    "s6": "PMFBY Crop Insurance",
+    "s7": "PM Kisan Maan Dhan",
+    "s8": "Kisan Credit Card",
+    "s9": "Indiramma Atmiya Bharosa"
+  },
+  "footer": {
+    "disclaimer": "Yojana Mitra provides general information about government schemes. For official details, visit your local agriculture office or respective government portals."
+  }
+}
